@@ -664,6 +664,14 @@
    
    
        }
+      .made { 
+      text-decoration: none;
+      
+      font-size: 14px;
+      color: #b59f5b;
+      font-weight: 700;
+      font-family: bold;
+      } 
       .product__button {
         height: 50px;
         margin-top: 18px;
@@ -792,17 +800,23 @@
     
 
 
-    @media (min-width: 0px) and (max-width: 3000px) {
-      .popap {
-        
-      }
-    }
+   
     @media (min-width:1200px){
       .menu-button-nav {
       display: none;
       } 
       }
-    
+     
+      @media screen and (min-width: 641px) and (max-width:1200px) and (orientation: portrait) {
+        .trend1, .trend2, .trend3, .trend4 {
+          width: 48%;
+          margin-bottom: 3px;
+          padding-top: 90px;
+        }  
+        .trends  {
+          justify-content: space-around;
+        }    
+      } 
     @media (min-width:641px) and (max-width: 1200px) {
       .baner {
       min-width: 641px;
@@ -852,19 +866,21 @@
             display: flex;
             flex-wrap: wrap;
             margin-top: 24px; 
+            justify-content: center;
            }
            .trend1 {
+            
             width: 49%;
             margin-bottom: 3px;
             padding: 95px 20px 16px;
            }
            .trend2 {
-            width: 49%;
+             width: 49%;
             margin-bottom: 3px;
             padding: 8px 20px 16px;
            }
            .trend3 {
-            width: 49%;
+             width: 49%;
             padding: 95px 20px 16px;
            }
            .trend4 {
@@ -896,6 +912,13 @@
             display: block;
             margin-bottom: 59px;
             }
+            .img-post {
+              display: flex;
+              max-width: 1200px;
+              width: 100%;
+              margin-right: auto;
+              margin-left: auto;
+          }
             .heading {
               font-size: 17px;
             } 
@@ -915,8 +938,17 @@
             .product {
              width: 49%;
             margin-bottom: 25px;
-            }  
-    
+            } 
+            .product__img {
+              width: 90%;
+            }
+            @media screen and (orientation: landscape) and (min-width: 641px) and (max-width:1200px) {
+              .trend1, .trend2, .trend3, .trend4 {
+                width: 24%;
+                padding-top: 90px;
+              }       
+             
+            }
     }
 
 
@@ -1024,36 +1056,21 @@
       }
         .product__img {
           display: flex;
-          width: 75vw;
+          width: 90%;
           margin-left: auto;
           margin-right: auto ;
 
+          
+         
+           
         }
         h2, h3 {
           font-size: 16px;
         }
         
       } 
-    @media (min-width: 641px) and (max-width:1200px) and (orientation: landscape) {
-      .trend1, .trend2, .trend3, .trend4 {
-        width: 23%;
-        margin-bottom: 3px;
-        padding-top: 90px;
-      }       
-      .trends  {
-        justify-content: space-between;
-      }
-    }
-    @media (min-width: 641px) and (max-width:1200px) and (orientation: portrait) {
-      .trend1, .trend2, .trend3, .trend4 {
-        width: 48%;
-        margin-bottom: 3px;
-        padding-top: 90px;
-      }  
-      .trends  {
-        justify-content: space-around;
-      }    
-    }
+   
+  
     @media (max-width: 640px) and (orientation: landscape) {
       .trend1, .trend2, .trend3, .trend4 {
         width: 48%;
