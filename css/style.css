@@ -646,7 +646,10 @@
       
       }
      
-   
+   .product {
+     display: flex;
+     flex-direction: column;
+   }
 
 
 
@@ -963,13 +966,14 @@
             }
             @media screen and (orientation: landscape) {
               .trend1, .trend2, .trend3, .trend4 {
-                width: 23%;
+                width: 24%;
                 margin-bottom: 3px;
+              
                 padding-top: 90px;
               }  
               .trends {
-                justify-content: space-between;
-              }
+                justify-content: center; 
+               }
     }
   }
 
@@ -1111,8 +1115,21 @@
         h2, h3 {
           font-size: 16px;
         }
-        
+        @media screen and (orientation: landscape) {
+          .trend1, .trend2, .trend3, .trend4 {
+            width: 49%;
+            margin-bottom: 3px;
+            padding-top: 90px;
+          }  
+          .trends {
+            display: flex;
+           flex-wrap: wrap;
+           flex-direction: row;
+            justify-content: space-between;
+            margin-top: 26px;
+            }  
       } 
+    }
    
   
   
