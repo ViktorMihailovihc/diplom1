@@ -4,16 +4,23 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+   
+    }
+    body {
+      overflow-x: hidden;
     }
     .popap {
     
       background: rgba(0, 0, 0, 0.7);
       display: flex;
       width: 100vw;
-      height: 200vh;
+      height: 100vh;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+     position: fixed;
+     z-index: 2;
+     display: none;
       }
       
       
@@ -32,7 +39,7 @@
        
         
       }
-     .form {
+     .popap-form {
       background-color: white;
       padding: 50px 15px;
       position: relative;
@@ -664,7 +671,7 @@
         padding: 50px 20px 30px;
         margin-top: -35px;
         flex-grow: 1;
-        min-height: 60%;
+       
        }
        .product__description {
          font-size: 15px;
@@ -834,6 +841,7 @@
         padding-left: 15px;
         margin-bottom: 40px;
         background: url(../images/banner-bg-tablet.jpg);
+        background-size: cover;
         } 
         .logo {
           width: 157px;
@@ -852,10 +860,13 @@
          font-size: 40px;
          line-height: 1.4;
          }
+         h2 {
+           font-size: 18px;
+         }
         .name-heading-new-posts {
           display: block;
           font-family: bold; 
-          font-size: 14px; 
+         
           line-height: 16px;
           color: #000000;
           font-weight: 700;
@@ -949,7 +960,6 @@
             justify-content: space-between;
             padding-left: 35px;
             padding-right: 35px;
-            align-items: baseline;
             } 
             .product {
               display: flex;
@@ -966,24 +976,30 @@
             }
             @media screen and (orientation: landscape) {
               .trend1, .trend2, .trend3, .trend4 {
-                width: 24%;
+                width: 25%;
                 margin-bottom: 3px;
-              
                 padding-top: 90px;
-              }  
+              }
+                
               .trends {
+                display: flex;
+                flex-wrap: nowrap;
                 justify-content: center; 
                }
     }
   }
 
    
-    @media (max-width:640px) {
+    @media (max-width:640px) and (min-width: 320px) {
+      .popap-form {
+        width: 80%;
+      }
       .baner {
       max-width: 640px;  
       padding-top: 30px;
       margin-bottom: 45px;
       background: url(../images/banner-mobile.jpg);
+      background-size: cover;
       }   
       .menu-list {
       display: none;  
@@ -1026,6 +1042,7 @@
           width: 100%;
           padding-top: 80px;
           margin-bottom: 3px;
+          margin-right: 0;
          }
       .tr-heading {
         margin-top: 10px;
@@ -1090,8 +1107,8 @@
             
         flex-wrap: wrap;
         
-        padding-left: 35px;
-        padding-right: 35px;
+        padding-left: 15px;
+        padding-right: 15px;
         } 
         .product {
          width: 100%;
