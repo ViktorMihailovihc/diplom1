@@ -4,13 +4,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+ 
+  }
    
-    }
-    body {
-      overflow-x: hidden;
-    }
     .popap {
-    
+      overflow-y: auto;
       background: rgba(0, 0, 0, 0.7);
       display: flex;
       width: 100vw;
@@ -27,25 +25,47 @@
       .close {
         display: flex;
         background-image: url(../svg/form-x.svg);
-        width: 30px;
-        height: 30px;
+        width: 23px;
+        height: 23px;
        
         cursor: pointer;
         position: absolute;
         background-color: transparent;
         right: 0;
-        top: -2.5em;
+        top: -2.1em;
      
        
         
       }
      .popap-form {
       background-color: white;
-      padding: 50px 15px;
+      padding: 50px 35px 5px;
       position: relative;
+      max-width: 390px;
+    }
+    .heading-feedback {
+      display: block;
+      font-family: bold;
+      line-height: 16px;
+      color: #000000;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .heading-feedback::after {
+      content: '';
+      display: block;
+      width: 80px;
+      border-top: 2px solid #b59f5b;
+      margin-top: 10px;
+      margin-right: auto;
+      margin-left: auto; 
     }
      .form-group {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
     .question {
       display: block;
@@ -65,7 +85,7 @@
   height: 38px;
   padding-left: 10px;
   padding-right: 25px;
-  border: 1px solid #cbd1d4;
+  border: none;
   background-color: #f3f7f5;
   font-size: 14px;
   font-family: Arial,sans-serif;
@@ -105,18 +125,29 @@
      height: 1px;
      clip: rect (1px, 1px, 1px, 1px);
     }
+    .wishes {
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #f3f7f5;
+    padding: 10px 25px 120px 15px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    background-color: #f3f7f5;
+    
+    }
     .button-feedback {
       box-sizing: border-box;
       width: 100%;
       border: none;
-      padding: 15px 0;
+      padding: 10px 0;
       cursor: pointer;
       background-color: #b59f5b;
       font-size: 20px;
       color: #ffffff;
       font-weight: 700;
       font-family: bold;
-      margin-top: 50px;
+      margin-top: 25px;
     }
 
     .baner {
@@ -800,7 +831,7 @@
       width: 1px;
       height: 1px;
       clip: rect(1px, 1px, 1px, 1px);
-      position: absolute; 
+      position: fixed; 
     }
     .copyright {
         display: block;
@@ -836,7 +867,7 @@
       } 
     @media screen and (min-width:641px) and (max-width: 1200px) {
       .baner {
-      min-width: 641px;
+     
         padding-top: 45px;
         padding-left: 15px;
         margin-bottom: 40px;
@@ -976,7 +1007,7 @@
             }
             @media screen and (orientation: landscape) {
               .trend1, .trend2, .trend3, .trend4 {
-                width: 25%;
+                width: 24.5%;
                 margin-bottom: 3px;
                 padding-top: 90px;
               }
@@ -984,7 +1015,7 @@
               .trends {
                 display: flex;
                 flex-wrap: nowrap;
-                justify-content: center; 
+                justify-content: space-between; 
                }
     }
   }
